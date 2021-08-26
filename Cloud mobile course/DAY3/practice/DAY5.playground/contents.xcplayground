@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='properties'/>
+        <page name='properties_practice'/>
+        <page name='init'/>
+        <page name='init_explain'/>
+        <page name='init_practice'/>
+        <page name='init_self'/>
+        <page name='Inherite'/>
+        <page name='recap method'/>
+        <page name='declare class'/>
+    </pages>
+</playground>
