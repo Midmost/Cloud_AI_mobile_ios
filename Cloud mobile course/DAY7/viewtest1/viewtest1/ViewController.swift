@@ -29,6 +29,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onExit(_ sender: Any) {
+        tfTest.resignFirstResponder()
+        mylabel.text = tfTest.text
     }
     
     
