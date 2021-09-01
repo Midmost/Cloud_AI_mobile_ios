@@ -41,7 +41,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        var title : String?
+        let title : String?
         
         if section == 0 {
             return "bts"
@@ -49,12 +49,13 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         {
             return "exo"
         }
-        return title
+        //return title
     }
  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        tableView.dataSource = self
     }
 
 
