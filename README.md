@@ -1,1 +1,1 @@
-# swift_study
+# study
