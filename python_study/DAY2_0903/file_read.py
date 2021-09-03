@@ -1,5 +1,5 @@
 # Read Evaluate Print Loop
-rf=open('sample.txt', 'rt', encoding='utf-8')
+rf=open('sample.txt', 'rt', encoding='utf-8')       # shift + enter
 rf.read(10)
 rf.read(9)
 rf.readline()
