@@ -13,6 +13,8 @@
 		BBC6C2C026E34E2E00A121B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC6C2BE26E34E2E00A121B4 /* Main.storyboard */; };
 		BBC6C2C226E34E3000A121B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC6C2C126E34E3000A121B4 /* Assets.xcassets */; };
 		BBC6C2C526E34E3000A121B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC6C2C326E34E3000A121B4 /* LaunchScreen.storyboard */; };
+		BBEB56222702B22400D52014 /* bts.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBEB56212702B22400D52014 /* bts.plist */; };
+		BBEB56242702BD7D00D52014 /* BTSTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEB56232702BD7D00D52014 /* BTSTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		BBC6C2C126E34E3000A121B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBC6C2C426E34E3000A121B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBC6C2C626E34E3000A121B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBEB56212702B22400D52014 /* bts.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = bts.plist; sourceTree = "<group>"; };
+		BBEB56232702BD7D00D52014 /* BTSTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTSTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				BBC6C2C126E34E3000A121B4 /* Assets.xcassets */,
 				BBC6C2C326E34E3000A121B4 /* LaunchScreen.storyboard */,
 				BBC6C2C626E34E3000A121B4 /* Info.plist */,
+				BBEB56212702B22400D52014 /* bts.plist */,
+				BBEB56232702BD7D00D52014 /* BTSTableViewController.swift */,
 			);
 			path = firstTestAR;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			files = (
 				BBC6C2BB26E34E2E00A121B4 /* art.scnassets in Resources */,
 				BBC6C2C526E34E3000A121B4 /* LaunchScreen.storyboard in Resources */,
+				BBEB56222702B22400D52014 /* bts.plist in Resources */,
 				BBC6C2C226E34E3000A121B4 /* Assets.xcassets in Resources */,
 				BBC6C2C026E34E2E00A121B4 /* Main.storyboard in Resources */,
 			);
@@ -140,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBC6C2BD26E34E2E00A121B4 /* ViewController.swift in Sources */,
+				BBEB56242702BD7D00D52014 /* BTSTableViewController.swift in Sources */,
 				BBC6C2B926E34E2E00A121B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
