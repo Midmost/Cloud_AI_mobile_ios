@@ -1,0 +1,67 @@
+/* 1: 주 메뉴 배치 */
+.header ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    border: 1px solid lightgray;
+    background: #ffffff;
+}
+.header li{
+    float: left;
+}
+.header li:last-child{
+    float: right;
+}
+/* 2: 주메뉴 링크 스타일 */
+.header li a{
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    color: #242c42;
+    text-decoration: none;
+}
+.header li a.active{
+    color: white;
+    background: skyblue;
+}
+.header li a:hover:not(.active){
+    background: lightgreen;
+}
+/* 3: 하위 메뉴 스타일 */
+.header .dropdown_content
+{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+.header .dropdown:hover .dropdown_content{
+    display: block;
+}
+.header .dropdown_content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+/* 4: 로그인 하위 메뉴 */
+.header .dropdown_content input{
+    width: 100px;
+    color: black;
+    padding: 12px 30px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+/* 5: 바닥글 */
+.footer{
+    clear: both;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid darkgray;
+    border-radius: 4px;
+}

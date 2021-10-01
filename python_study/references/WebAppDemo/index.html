@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SF Mania</title>
+    <style>
+        /* 1: 이미지 슬라이드 전체 레이아웃 */
+        .img-slides{
+            margin: 40px 0 40px 0;
+        }
+        .slides{
+            padding: 0;
+            width: 809px;
+            height: 420px;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .slides input{
+            display: none;
+        }
+        /* 2: 슬라이드 이미지 레이아웃 */
+        .slide-container{display: block;}
+        .slide{
+            top: 0;
+            width: 809px;
+            height: 420px;
+            display: block;
+            position: absolute;
+            transform: scale(0);
+            transition: all 0.7s ease-in-out;
+            opacity: 0;
+        }
+        .slide img{
+            width: 100%;
+            height: 100%;
+        }
+        /* 3: 이미지 슬라이드 네비게이션 마크 */
+        .slide-nav label{
+            width: 100px;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            cursor: pointer;
+            color: #ffffff;
+            font-size: 150pt;
+            text-align: center;
+            line-height: 420px;
+            background-color: rgba(255, 255, 255, 0.3);
+            text-shadow: 0px 0px 15px rgb(119,119,119);
+            display: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        /* 4: 슬라이드 네비게이션 동작 */
+        input:checked + .slide{
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 1s ease-in-out;
+        }
+        input:checked ~ .slide-nav label{
+            display: block;
+        }
+        .slide:hover + .slide-nav label{
+            opacity: 0.5;
+        }
+        .slide-nav label:hover{
+            opacity: 1;
+        }
+        .slide-nav .next{right: 0;}
+        /* 5: 이벤트와 탭 메뉴 스타일 */
+        @media screen and (max-width:800px){
+            .content, .footer{
+                width: 900px;
+            }
+        }
+        @media screen and (max-width: 1280px){
+            .content, .footer{
+                width: 1350px;
+            }
+        }
+        .content > .events{
+            float: left;
+            width: 50%;
+            margin-left: 10%;
+        }
+        .content h2{
+            text-align: center;
+        }
+        .content .tab_box{
+            float: left;
+            width: 30%;
+            margin-right: 10%;
+            margin-top: 25px;
+            margin-bottom: 100px;
+        }
+        /* 6:탭 버튼 선택 동작 */
+        #boxoffice_tab{
+            display: none;
+        }
+        #boxoffice_tab ~ div:nth-of-type(2){
+            display: none;
+        }
+        #boxoffice_tab:checked ~ div:nth-of-type(2){
+            display: block;
+        }
+        #planned_tab{
+            display: none;
+        }
+        #planned_tab ~ div:nth-of-type(3){
+            display: none;
+        }
+        #planned_tab:checked ~ div:nth-of-type(3){
+            display: block;
+        }
+        /* 7: 탭버튼 및 항목 모양 구성 */
+        .tab_buttons{
+            overflow: hidden;
+        }
+        .tab_buttons > label{
+            display: block;
+            float: left;
+            width: 175px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            background: white;
+            color: black;
+        }
+        #boxoffice_tab:checked ~ .tab_buttons > label:nth-of-type(1){
+            background: black;
+            color: white;
+        }
+        #planned_tab:checked ~ .tab_buttons > label:nth-of-type(2){
+            background: black;
+            color: white;
+        }
+        .tab_item{
+            overflow: hidden;
+            height: 180px;
+            width: 348px;
+            border: 1px solid black;
+        }
+    </style>
+    <link rel="stylesheet" href="common.css" type="text/css">
+</head>
+<body>
+    <!-- 1: 기본 레이아웃 -->
+    <div class="header">
+        <!-- 2: 주 메뉴 -->
+        <ul>
+            <li><a class="active" href="#">HOME</a></li>
+            <li><a href="#">MOVIE NEWS</a></li>
+            <li class="dropdown">
+                <a class="dropbtn" href="index.html">MOVIE INFO</a>
+                <!-- 3: 하위 메뉴 -->
+                <div class="dropdown_content">
+                    <a href="#">Box Office</a>
+                    <a href="#">Movie Review</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropbtn" href="#">SF MOVIE</a>
+                <div class="dropdown_content">
+                    <a href="#">Starwars</a>
+                    <a href="#">Alien</a>
+                    <a href="#">Star Trek</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropbtn" href="#">LOGIN</a>
+                <div class="dropdown_content" style="right: 8px;">
+                    <input type="text" name="id" id="username" placeholder="User ID">
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <a href="#" id="login">LOG IN</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <!-- 1: 이미지 슬라이드 작업 -->
+        <div class="img-slides">
+            <ul class="slides">
+                <li class="slide-container">
+                    <input type="radio" name="radiobtn" id="img-1" checked>
+                    <div class="slide">
+                        <img src="img/movie_cut1.JPG">
+                    </div>
+                    <div class="slide-nav">
+                        <label for="img-4" class="prev">&#x2039</label>
+                        <label for="img-2" class="next">&#x203a</label>
+                    </div>
+                </li>
+                <li class="slide-container">
+                    <input type="radio" name="radiobtn" id="img-2">
+                    <div class="slide">
+                        <img src="img/movie_cut2.JPG">
+                    </div>
+                    <div class="slide-nav">
+                        <label for="img-1" class="prev">&#x2039</label>
+                        <label for="img-3" class="next">&#x203a</label>
+                    </div>
+                </li>
+                <li class="slide-container">
+                    <input type="radio" name="radiobtn" id="img-3">
+                    <div class="slide">
+                        <img src="img/movie_cut3.JPG">
+                    </div>
+                    <div class="slide-nav">
+                        <label for="img-2" class="prev">&#x2039</label>
+                        <label for="img-4" class="next">&#x203a</label>
+                    </div>
+                </li>
+                <li class="slide-container">
+                    <input type="radio" name="radiobtn" id="img-4">
+                    <div class="slide">
+                        <img src="img/movie_cut4.JPG">
+                    </div>
+                    <div class="slide-nav">
+                        <label for="img-3" class="prev">&#x2039</label>
+                        <label for="img-1" class="next">&#x203a</label>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        <!-- 2: 영화 이벤트 작업 -->
+        <div class="events">
+            <h2>영화 이벤트 목록</h2>
+            <a href="#"><img src="img/movie_event1.jpg"></a>
+            <a href="#"><img src="img/movie_event2.jpg"></a>
+            <a href="#"><img src="img/movie_event3.jpg"></a>
+            <a href="#"><img src="img/movie_event4.jpg"></a>
+        </div>
+        <!-- 3: 탭 메뉴 작업 -->
+        <div class="tab_box">
+            <input type="radio" name="tab" id="boxoffice_tab" checked>
+            <input type="radio" name="tab" id="planned_tab">
+            <div class="tab_buttons">
+                <label for="boxoffice_tab">박스 오피스</label>
+                <label for="planned_tab">상영 예정작</label>
+            </div>
+            <div class="tab_item">
+                <ol class="item">
+                    <li><strong class="tit">라이온 킹</strong></li>
+                    <li><span class="tit">엑시트</span></li>
+                    <li><span class="tit">사자</span></li>
+                    <li><span class="tit">알라딘</span></li>
+                </ol>
+            </div>
+            <div class="tab_item">
+                <ul class="item">
+                    <li><span class="tit">엥그리버드2</span></li>
+                    <li><span class="tit">룩 어웨이</span></li>
+                    <li><span class="tit">분노의 질주</span></li>
+                    <li><span class="tit">원더랜드</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <!-- 4: 제작사 및 저작권 정보 -->
+        <address>
+            주식회사 프리지아랩 / 경기도 용인시 기흥구 청덕동 499 용인 테크노밸리 777호
+        </address>
+        <h4>대표이사: 김도균 / 사업자 등록 번호: 123-45-67890 / 등록일자: 2019년 7월 29일 / 편집인: 김도균 / 발행일자: 2019년 8월 1일<br>
+            <a href="mailto:kimdokyun@outlook.com">메일 보내기</a> / 이 사이트의 모든 권리는 제작자에게 있습니다.
+        </h4>
+    </div>
+</body>
+</html>
