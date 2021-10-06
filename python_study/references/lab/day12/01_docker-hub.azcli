@@ -1,0 +1,9 @@
+#1. 로그인
+docker login -u <YOUR ACCOUNT>
+
+#2. 도커 이미지 태그 적용
+docker image tag guestbook-app:latest <DOCKER ACC.>/guestbook-app:latest
+
+#3. Docker Hub에 이미지 등록하기
+docker image push <DOCKER ACC.>/guestbook-app:latest
+

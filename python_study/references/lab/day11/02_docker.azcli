@@ -1,0 +1,8 @@
+#0. Dockerfile 확인
+#1. 도커 이미지 빌드
+sudo docker image build ./firstNodeDockerApp -t firstNode-app:1.0
+sudo docker build ./GuestBook4ExpressJS -t guestbook-app
+
+#2. 이미지 확인
+sudo docker images
+
