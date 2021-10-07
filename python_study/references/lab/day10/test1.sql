@@ -12,9 +12,9 @@ go
 
 INSERT INTO dbo.testTable
 VALUES
-(newid());
-GO 10
+(newid());   
+GO 10       
 
 SELECT [id]
       ,[dataval]
-  FROM [TestDB].[dbo].[testTable]
+  FROM [dbo].[testTable]
