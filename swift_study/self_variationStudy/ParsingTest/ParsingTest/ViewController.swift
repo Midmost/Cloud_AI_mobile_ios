@@ -36,7 +36,11 @@ class ViewController: UIViewController {
         guard let url = URL(string:strUrl)else {return}
         let request = URLRequest(url: url)
         let session = URLSession.shared
+        
+        
         let task = session.dataTask(with: request, completionHandler: taskHandler)
+    
+        
         task.resume()
     }
     
