@@ -20,8 +20,13 @@ az acr list --resource-group rg-contosoneuro-kc --query "[].{acrLoginServer:logi
 # docker tag guestbook-app crcontosokdk.azurecr.io/guestbook-app:v1
 docker tag guestbook-app crcontosokdk.azurecr.io/guestbook-app:v1
 
+docker tag decibe1magic/guestbook-app crcontosokdk.azurecr.io/guestbook-app:v2
+decibe1magic/guestbook-app
+
 #7 도커 이미지를 ACR에 등록하기
 docker push crcontosokdk.azurecr.io/guestbook-app:v1
+docker push crcontosokdk.azurecr.io/guestbook-app:v2
+
 # 지금 이미 위에서 crcontosokdk로 이름을 지정해버림 하지만 아래거가 내가 만들었던 거라 아래거로 해보자
 #docker push wpkHJ.azurecr.io/guestbook-app:v1
 
@@ -34,10 +39,12 @@ az acr repository list --name crcontosokdk --output table
 sudo az acr repository show-tags --name crcontosokdk --repository guestbook-app --output table
 # 왜 비번 쓰라고 하지?
 
+
 #10. 컨테이너 레지스트리에서 guestbook-app:v1 컨테이너 이미지를 끌어와 실행
 sudo docker run -p 8080:300 -d --name iuguestbook crhallofarmour01.azurecr.io/guestbook-app:v1
 # 로컬에 없으면 iuguestbook crhallofarmour01.azurecr.io을 식별해서 컨테이너 레지스트리에서 가져와
 # sudo docker run -p 8080:300 -d --name iuguestbook wpkHJ.azurecr.io/guestbook-app:v1
+jjongallee/guestbook-app
 
 #11. Admin 사용자 설정
 #ACI나 AKS 등에서 ACR의 리포지토리를 액세스하려면 필수.

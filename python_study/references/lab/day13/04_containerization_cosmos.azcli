@@ -1,0 +1,24 @@
+#1. content-api의 config.js 수정
+cd /home/tony/content-api
+
+sed -i 's#/localhost:27017/contentdb#/cmdb-conference:70iqTStOFF4O5MbuIttbcPp7wUlmGzEJKt0IyXgtCuCpew4YKSuXCOAGDy9LsDk9TQjY0qXfYnAr5j2KCcfgDA%3D%3D@cmdb-conference.mongo.cosmos.azure.com:10255/contentdb?ssl=true#g' ./config/config.js
+
+#2. API 도커 이미지 다시 만들기
+docker image build -t content-api /home/tony/content-api
+
+#3. API 도커 컨테이너 실행
+docker container run --name api --net contosoneuro -d -p 3001:3001 content-api
+docker container run --name web --net contosoneuro -p 3000:3000 -d -e CONTENT_API_URL=http://api:3001 content-web
+
+#4 api 컨테이너 실행 확인
+docker container ls
+docker container logs api
+curl http://localhost:3001/speakers
+
+#5 브라우저에서 web 컨테이너 실행 확인
+
+#6. 컨테이너 중지 및 삭제
+sudo docker container stop web
+sudo docker container rm web
+sudo docker container stop api
+sudo docker container rm api

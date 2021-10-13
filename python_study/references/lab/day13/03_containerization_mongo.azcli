@@ -1,0 +1,124 @@
+
+#0. GitHub Source Cloning
+git clone https://github.com/microsoft/MCW-Cloud-native-applications.git ./GitSources
+
+
+# 원본을 안 건드리려고 다른 곳에 복사해놓는 거 
+# 이 샘플의 운영체제가 리눅스라인 
+# cp, xcopy, 
+# -r 은 디렉토리 명령어 
+
+#0. Copy Source
+cp -r /Users/jo/Documents/GitHub/Cloud_AI_mobile_ios/python_study/references/lab/ .           # front web // . 이 현재위치
+cp -r /home/tony/GitSources/Hands-on\ lab/lab-files/infrastructure//content-api/ /home/tony/  # back api
+cp -r /home/tony/GitSources/Hands-on\ lab/lab-files/infrastructure/content-init/ /home/tony/  # db init
+
+#1. 도커 네트워크 만들기
+sudo docker network create contosoneuro
+
+#2. mongodb 컨테이너 실행 (이미지 다운로드)
+sudo docker container run --name mongo --net contosoneuro -p 27017:27017 -d mongo:4.0
+# 이 부분은 우리 컴퓨터에 몽고가 없어서 가져오려고 쓰는거임 방법은 2가지
+# 홈피에서 설치, 아니면 몽고가 셋업되어 있는 다커 이미지를 가져오거나
+# 우리는 두번째 방법을 가져오는거야
+
+
+# 서비스를 올리고 나서 클라우드 내에서 프론트 백 디비가 서로 통신이 되려면 네트워크가 필요
+
+
+#2.1. mongodb 컨테이너 실행 및 준비 확인
+sudo docker container list
+sudo docker container logs mongo
+
+#2.2 종속성 설치 (다른 라이브러리를 가져온다는 뜻)
+npm install
+
+
+#3. mongodb 초기화 (content-init)
+node ./content-init/server.js   # 콘텐츠-init이란 폴더를 실행하려면 노드 모듈이 필요해서 npm install을 한거야. 
+# 노드 모듈을 빼고 깃에 올린다고...? 
+# 왜냐면 우리가 쓴 것만 올리니까
+# 그래서 노드 모듈을 다시 데려와서 설치 
+
+#3.1 mongodb 테스트 데이터 확인(터미널에서)
+
+docker exec -it mongo mongo
+# 실행  유사터미널 컨테이너(몽고라는 이름의)의 쉘(몽고라는 이름의)
+
+# mongo
+show dbs
+use contentdb
+show collections
+db.speakers.find()
+db.sessions.find()
+quit()
+
+#4. ./controllers/sessions.server.controller.js 수정
+exports.list = function(query, callback) {
+    console.log("==== Load Sessions ====");
+    Session.find(query).lean().exec(function(err, sessionsList) {
+        if (err) {
+            callback(err);
+        } else {
+            callback(null, sessionsList);
+        }
+    });
+};
+
+#5. 도커 이미지 만들기
+sudo docker image build -t content-api . 
+# 여기서 .은 다커 파일이 있는 위치
+sudo docker image build -t content-web .
+# 저렇게 . 만 있을 경우 해당 파일이 있는 위치로 가줘야 실행가능 (현재 위치)
+docker image build -t content-init
+#이미지 이름을 정해주는 게 -t
+#permission denied 뜨면 sudo 치고 맥 어드민 비번 써주자
+
+
+#6. 도커 이미지 실행
+sudo docker container run --name api --net contosoneuro -p 3001:3001 -e MONGODB_CONNECTION=mongodb://mongo:27017/contentdb -d content-api
+sudo docker container run --name web --net contosoneuro -P -d content-web
+
+#6.1 api 컨테이너 실행 확인
+sudo docker container ls
+sudo docker container logs api
+curl http://localhost:3001/speakers
+curl http://localhost:[PORT]/speakers.html
+#contosoneuro 네트워크에서 기본 "http://localhost:3001"로 연결되지 않기 때문에 API 서비스의 이름으로 호출해야 한다. 
+
+#6.2. 환경 변수 설정
+#6.2.1 content-web/Dockerfile의 4번째 행으로 환경변수와 기본 값 추가
+ENV CONTENT_API_URL http://localhost:3001
+
+#다커파일을 수정한거임 위에는 왜 추가했냐면 환경변수선언을 하고 기본값을 주는 이유는 만약 다른 값을 쓰고 싶으면 content_api_url에 다른 값을 줄 수 있음 이건 디폴트로 해놓겠단 뜻
+
+
+#6.3 환경 변수를 적용한 content-web 도커 이미지 다시 빌드
+sudo docker image build -t content-web .
+
+#6.4 브라우저에서 공인 IP로 테스트하기 위해 지정된 노출 포트로 컨테이너 실행
+##NSG에 3000번 포트 인바운드 허용
+## curl 명령으로 자바스크립트를 처리할 수 없으므로 브라우저 확인 필요
+sudo docker container run --name web --net contosoneuro -p 3000:3000 -d -e CONTENT_API_URL=http://api:3001 content-web
+
+# 컨테이너 실행한거고 bash에서 지정해주려면, -- 을 쓰면 된다!
+# 쉘마다 차이가 있다
+# 옵션을 붙여줄 때 --이다
+
+# 도커 기술문서, 리눅스 쉘 프로그래밍 
+# 목차를 보고 
+
+
+#6.5 실행중인 컨테이너에서 명령 실행
+sudo docker container exec -it web sh  # 웹 컨테이너에 터미널을 연결해주고
+curl http://api:3001/speakers  # contosoneuro에 연결된 api 컨테이너 # 웹이랑 api랑 잘 돌고 있다는 거를 보여주는
+exit                            
+
+#7. 컨테이너 중지 및 삭제
+sudo docker container stop web
+sudo docker container rm web
+sudo docker container stop api
+sudo docker container rm api
+
+
+

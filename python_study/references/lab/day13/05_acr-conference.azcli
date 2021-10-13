@@ -1,0 +1,16 @@
+#1. 이미지에 네임스페이스와 태그 지정
+docker image tag content-web crsteelflea.azurecr.io/content-web
+docker image tag content-api crsteelflea.azurecr.io/content-api
+
+#1.1 이미지 목록 확인
+docker image ls
+
+#2. ACR에 이미지 푸시하기
+docker image push crsteelflea.azurecr.io/content-web
+docker image push crsteelflea.azurecr.io/content-api
+
+#3. ACR에 배포된 이미지 리포지토리 확인
+az acr repository list --name crsteelflea --output table
+
+#4. content-web 리포지토리의 태그 확인
+az acr repository show-tags --name crsteelflea --repository content-web --output table
