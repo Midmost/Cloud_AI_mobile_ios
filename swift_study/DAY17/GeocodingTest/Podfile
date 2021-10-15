@@ -6,6 +6,6 @@ target 'GeocodingTest' do
   use_frameworks!
 
   # Pods for GeocodingTest
-	pod 'Alamofire'
-  pod 'SwiftyJSON'
+	pod 'Alamofire', '~> 5.4'
+	pod 'SwiftyJSON', '~> 4.0'
 end

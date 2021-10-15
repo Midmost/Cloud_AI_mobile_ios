@@ -44,10 +44,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="latLabel" destination="X8b-RR-Cbw" id="6yG-oB-HIV"/>
-                        <outlet property="lblLat" destination="X8b-RR-Cbw" id="7GM-Hp-5yY"/>
-                        <outlet property="lblLon" destination="JS4-jc-cBG" id="V0L-Dh-Lww"/>
-                        <outlet property="logLabel" destination="JS4-jc-cBG" id="c8O-mz-weM"/>
+                        <outlet property="latLabel" destination="X8b-RR-Cbw" id="DzP-7E-TM4"/>
+                        <outlet property="logLabel" destination="JS4-jc-cBG" id="iun-A2-mAW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

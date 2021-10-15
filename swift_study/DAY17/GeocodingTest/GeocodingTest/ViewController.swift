@@ -7,7 +7,7 @@
 
 import UIKit
 import Alamofire
-
+import SwiftyJSON
 
 class ViewController: UIViewController {
     let apiKey = "KakaoAK b845d6a5d67434187b7a96403fe148bb"
@@ -33,14 +33,19 @@ class ViewController: UIViewController {
         let alamo = AF.request(strURL, method: .get, parameters: params, headers: headers)
         alamo.responseJSON { response in
             switch response.result {
-            case .success(let data):
-                if let json = data as? [String:Any]{
-                    print(json)
+            case .success(let value):
+                let json = JSON(value)
+                let lat = json["documents"].arrayValue[0]["y"].string
+                let lon = json["documents"].arrayValue[0]["x"].string
+                //print(lat, lon)
+                DispatchQueue.main.async {
+                    self.latLabel.text = lat as? String
+                    self.logLabel.text = lon as? String
                 }
                 
             case .failure(let error):
-                if let desc = error.errorDescription {
-                    print(desc)
+                if let description_message = error.errorDescription {
+                    print(description_message)
                 }
             }
         }
