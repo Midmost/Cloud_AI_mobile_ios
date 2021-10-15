@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  LocalizeTest
+
+  Created by jo on 2021/10/15.
+  
+*/
+
+"hello" = "hello";
+"I'm" = "I am";
+"heejin" = "heejin";

@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  LocalizeTest
+
+  Created by jo on 2021/10/15.
+  
+*/
+
+"hello" = "안녕";
+"I'm" = "나는";
+"heejin" = "희진";
