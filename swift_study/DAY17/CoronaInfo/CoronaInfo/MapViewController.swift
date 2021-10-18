@@ -12,11 +12,10 @@ import SwiftyJSON
 class MapViewController: UIViewController {
     
     let apiKey = "KakaoAK b845d6a5d67434187b7a96403fe148bb"
-    var lat:String?
-    var lon:String?
+//    var lat:String?
+//    var lon:String?
     var hospital: [String:Any]?
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 //        print(hospital!)
@@ -28,7 +27,20 @@ class MapViewController: UIViewController {
         
         getCoord(query: query)
         
+//        //맵뷰
+//        let mapView = MTMapView (frame: self.view.bounds)
+//        //mapView.delegate = selfm
+//        mapView.baseMapType = .standard
+//
+//        let pointGeo = MTMapPointGeo(latitude: 37.4634, longitude: 126.324)
+//        let point = MTMapPoint(geoCoord: pointGeo)
+//        mapView.setMapCenter(point, animated: true)
+//        mapView.setZoomLevel(-1, animated:true)
+//        self.view.addSubview(mapView)
+        
     }
+    
+ 
     
     
     func getCoord(query: String){
@@ -41,9 +53,10 @@ class MapViewController: UIViewController {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                self.lat = json["documents"].arrayValue[0]["y"].string
-                self.lon = json["documents"].arrayValue[0]["x"].string
-                print(self.lat, self.lon)
+                //좌표를 가져왔을 때 이걸 self 안 쓰고 바로 잡을 수 있다.
+                let lat = json["documents"].arrayValue[0]["y"].double
+                let lon = json["documents"].arrayValue[0]["x"].double
+                print(lat, lon)
 
             case .failure(let error):
                 if let description_message = error.errorDescription {
