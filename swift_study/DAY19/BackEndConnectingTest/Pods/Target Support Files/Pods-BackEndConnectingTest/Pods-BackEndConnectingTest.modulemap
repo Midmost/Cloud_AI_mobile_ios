@@ -1,0 +1,6 @@
+framework module Pods_BackEndConnectingTest {
+  umbrella header "Pods-BackEndConnectingTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
