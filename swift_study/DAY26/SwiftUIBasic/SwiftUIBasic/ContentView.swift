@@ -9,8 +9,33 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack{
+            HStack{
+                VStack{
+                    Text("Hello, world!")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .lineLimit(3)
+                        .truncationMode(.middle)
+                        .lineSpacing(50)
+                        .shadow(color: .red, radius: 3, x: 3, y: 3)
+                        .foregroundColor(.yellow)
+                        .background(.blue)
+                        .cornerRadius(20)
+                    Text("나도 textView")
+                        .font(.largeTitle)
+                        .background(.green)
+                        .padding()
+                    
+                    
+                }.padding()
+                    .background(.red)
+                    .font(.largeTitle)
+                
+                
+        }
+            
+        }
     }
 }
 
