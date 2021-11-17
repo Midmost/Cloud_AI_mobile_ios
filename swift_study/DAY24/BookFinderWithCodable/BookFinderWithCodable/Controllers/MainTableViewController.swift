@@ -1,5 +1,6 @@
 import UIKit
 import Alamofire
+import SDWebImage
 
 class MainTableViewController: UITableViewController {
 
@@ -11,7 +12,7 @@ class MainTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.rowHeight = 100
         search() // 함수 호출
     }
     

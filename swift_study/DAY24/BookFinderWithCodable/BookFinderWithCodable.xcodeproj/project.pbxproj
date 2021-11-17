@@ -45,6 +45,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C83942AD27435414006E6DA8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C83942AE27435421006E6DA8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C86023402742277600F83C65 /* MainTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C83942AF2743542E006E6DA8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C860235627422F8400F83C65 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C86023302742277600F83C65 = {
 			isa = PBXGroup;
 			children = (
@@ -64,15 +87,16 @@
 		C860233B2742277600F83C65 /* BookFinderWithCodable */ = {
 			isa = PBXGroup;
 			children = (
+				C83942AE27435421006E6DA8 /* Controllers */,
+				C83942AF2743542E006E6DA8 /* Models */,
+				C83942AD27435414006E6DA8 /* Utils */,
 				C860233C2742277600F83C65 /* AppDelegate.swift */,
 				C860233E2742277600F83C65 /* SceneDelegate.swift */,
-				C86023402742277600F83C65 /* MainTableViewController.swift */,
 				C86023422742277600F83C65 /* Main.storyboard */,
 				C86023482742277800F83C65 /* Assets.xcassets */,
 				C860234A2742277800F83C65 /* LaunchScreen.storyboard */,
 				C860234D2742277800F83C65 /* Info.plist */,
 				C86023452742277600F83C65 /* BookFinderWithCodable.xcdatamodeld */,
-				C860235627422F8400F83C65 /* Models.swift */,
 				C860237B2742350500F83C65 /* TableViewController.swift */,
 			);
 			path = BookFinderWithCodable;
