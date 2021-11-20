@@ -9,8 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+            VStack{
+                List{
+                    ForEach(books ?? []){ book in
+                        NavigationLink(destination: {WebView(strURL: book.url)}
+                                       {label: BookCell(book: book)}
+                        
+                        
+                        
+                        
+                        
+                        BookCell(book: book)
+                    }
+                }
+                .searchable(text: $searchText, prompt:"검색어를 입력하세요>"
+                                .onSubmit(of: .search, search)
+            }
+        }
     }
 }
 
