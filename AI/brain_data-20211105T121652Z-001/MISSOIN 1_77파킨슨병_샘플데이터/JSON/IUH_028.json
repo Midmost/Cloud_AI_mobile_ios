@@ -1,0 +1,962 @@
+{
+  "info": {
+    "name": "FP-CIT PET image",
+    "description": "Level 2 Incomplete set",
+    "date_created": "10-2월-2015"
+  },
+  "patient": {
+    "age": 77,
+    "sex": "F",
+    "diagnosis": "ET",
+    "type": "Atypical Parkinsonism"
+  },
+  "images": {
+    "id": "IUH_028",
+    "modality": "FP-CIT PET",
+    "width": 256,
+    "height": 256,
+    "file_name": "IUH_0280001",
+    "slicethickness": 1.5,
+    "pixelspace": [
+      1.3266818523406982,
+      1.3266818523406982
+    ]
+  },
+  "Labels": [
+    [
+      {
+        "Slice_Number": 61,
+        "ROI_name": "Right_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          155,
+          104
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 61,
+        "ROI_name": "Right_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          163,
+          111
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 61,
+        "ROI_name": "Right_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          165,
+          121
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 61,
+        "ROI_name": "Right_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          166,
+          131
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 61,
+        "ROI_name": "Left_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          123,
+          100
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 61,
+        "ROI_name": "Left_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          115,
+          107
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 61,
+        "ROI_name": "Left_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          111,
+          115
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 61,
+        "ROI_name": "Left_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          107,
+          125
+        ],
+        "Width": 8,
+        "Height": 8
+      }
+    ],
+    [
+      {
+        "Slice_Number": 62,
+        "ROI_name": "Right_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          154,
+          104
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 62,
+        "ROI_name": "Right_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          162,
+          110
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 62,
+        "ROI_name": "Right_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          165,
+          120
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 62,
+        "ROI_name": "Right_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          166,
+          130
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 62,
+        "ROI_name": "Left_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          124,
+          100
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 62,
+        "ROI_name": "Left_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          116,
+          107
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 62,
+        "ROI_name": "Left_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          111,
+          115
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 62,
+        "ROI_name": "Left_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          107,
+          124
+        ],
+        "Width": 8,
+        "Height": 8
+      }
+    ],
+    [
+      {
+        "Slice_Number": 63,
+        "ROI_name": "Right_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          153,
+          103
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 63,
+        "ROI_name": "Right_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          161,
+          110
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 63,
+        "ROI_name": "Right_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          165,
+          119
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 63,
+        "ROI_name": "Right_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          166,
+          130
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 63,
+        "ROI_name": "Left_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          124,
+          100
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 63,
+        "ROI_name": "Left_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          116,
+          107
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 63,
+        "ROI_name": "Left_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          111,
+          115
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 63,
+        "ROI_name": "Left_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          107,
+          124
+        ],
+        "Width": 8,
+        "Height": 8
+      }
+    ],
+    [
+      {
+        "Slice_Number": 64,
+        "ROI_name": "Right_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          152,
+          102
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 64,
+        "ROI_name": "Right_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          160,
+          109
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 64,
+        "ROI_name": "Right_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          165,
+          118
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 64,
+        "ROI_name": "Right_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          166,
+          128
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 64,
+        "ROI_name": "Left_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          125,
+          102
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 64,
+        "ROI_name": "Left_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          116,
+          106
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 64,
+        "ROI_name": "Left_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          110,
+          115
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 64,
+        "ROI_name": "Left_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          107,
+          125
+        ],
+        "Width": 8,
+        "Height": 8
+      }
+    ],
+    [
+      {
+        "Slice_Number": 65,
+        "ROI_name": "Right_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          151,
+          104
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 65,
+        "ROI_name": "Right_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          160,
+          108
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 65,
+        "ROI_name": "Right_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          165,
+          116
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 65,
+        "ROI_name": "Right_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          166,
+          127
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 65,
+        "ROI_name": "Left_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          126,
+          103
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 65,
+        "ROI_name": "Left_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          116,
+          105
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 65,
+        "ROI_name": "Left_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          110,
+          114
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 65,
+        "ROI_name": "Left_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          107,
+          123
+        ],
+        "Width": 8,
+        "Height": 8
+      }
+    ],
+    [
+      {
+        "Slice_Number": 66,
+        "ROI_name": "Right_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          151,
+          104
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 66,
+        "ROI_name": "Right_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          160,
+          108
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 66,
+        "ROI_name": "Right_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          165,
+          116
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 66,
+        "ROI_name": "Right_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          166,
+          127
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 66,
+        "ROI_name": "Left_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          127,
+          104
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 66,
+        "ROI_name": "Left_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          117,
+          106
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 66,
+        "ROI_name": "Left_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          111,
+          114
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 66,
+        "ROI_name": "Left_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          107,
+          123
+        ],
+        "Width": 8,
+        "Height": 8
+      }
+    ],
+    [
+      {
+        "Slice_Number": 67,
+        "ROI_name": "Right_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          151,
+          105
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 67,
+        "ROI_name": "Right_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          160,
+          109
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 67,
+        "ROI_name": "Right_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          165,
+          117
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 67,
+        "ROI_name": "Right_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          167,
+          127
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 67,
+        "ROI_name": "Left_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          127,
+          104
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 67,
+        "ROI_name": "Left_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          117,
+          106
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 67,
+        "ROI_name": "Left_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          111,
+          114
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 67,
+        "ROI_name": "Left_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          107,
+          123
+        ],
+        "Width": 8,
+        "Height": 8
+      }
+    ],
+    [
+      {
+        "Slice_Number": 68,
+        "ROI_name": "Right_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          151,
+          106
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 68,
+        "ROI_name": "Right_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          160,
+          109
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 68,
+        "ROI_name": "Right_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          165,
+          118
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 68,
+        "ROI_name": "Right_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          167,
+          128
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 68,
+        "ROI_name": "Left_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          127,
+          105
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 68,
+        "ROI_name": "Left_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          117,
+          107
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 68,
+        "ROI_name": "Left_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          111,
+          115
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 68,
+        "ROI_name": "Left_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          108,
+          124
+        ],
+        "Width": 8,
+        "Height": 8
+      }
+    ],
+    [
+      {
+        "Slice_Number": 65,
+        "ROI_name": "Right_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          146,
+          96
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 65,
+        "ROI_name": "Right_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          155,
+          100
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 65,
+        "ROI_name": "Right_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          161,
+          108
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 65,
+        "ROI_name": "Right_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          165,
+          118
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 65,
+        "ROI_name": "Left_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          122,
+          95
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 65,
+        "ROI_name": "Left_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          114,
+          100
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 65,
+        "ROI_name": "Left_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          106,
+          107
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 65,
+        "ROI_name": "Left_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          103,
+          116
+        ],
+        "Width": 8,
+        "Height": 8
+      }
+    ],
+    [
+      {
+        "Slice_Number": 66,
+        "ROI_name": "Right_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          146,
+          96
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 66,
+        "ROI_name": "Right_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          155,
+          100
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 66,
+        "ROI_name": "Right_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          161,
+          108
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 66,
+        "ROI_name": "Right_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          165,
+          118
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 66,
+        "ROI_name": "Left_Caudate",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          122,
+          95
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 66,
+        "ROI_name": "Left_Anterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          114,
+          100
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 66,
+        "ROI_name": "Left_Middle_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          106,
+          107
+        ],
+        "Width": 8,
+        "Height": 8
+      },
+      {
+        "Slice_Number": 66,
+        "ROI_name": "Left_Posterior_Putamen",
+        "ROI_type": "Circle",
+        "Center_Coordinates": [
+          103,
+          116
+        ],
+        "Width": 8,
+        "Height": 8
+      }
+    ]
+  ],
+  "Neuropsychology": [
+    {
+      "id": {
+        "id": "SNSB"
+      },
+      "item": {
+        "item": []
+      },
+      "score": {
+        "score": []
+      }
+    },
+    {
+      "id": {
+        "id": "NPI"
+      },
+      "item": {
+        "item": []
+      },
+      "score": {
+        "score": []
+      }
+    },
+    {
+      "id": {
+        "id": "UPDRS"
+      },
+      "item": {
+        "item": []
+      },
+      "score": {
+        "score": []
+      }
+    }
+  ]
+}
